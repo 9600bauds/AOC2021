@@ -155,9 +155,7 @@ public class SnailFishNum {
         }
         if(rightTerm instanceof SnailFishNum){
             SnailFishNum right = (SnailFishNum) rightTerm;
-            if(right.CheckExplosion(depth + 1)){
-                return true;
-            }
+            return right.CheckExplosion(depth + 1);
         }
         return false;
     }
@@ -230,11 +228,9 @@ public class SnailFishNum {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("[");
-        sb.append(leftTerm);
-        sb.append(",");
-        sb.append(rightTerm);
-        sb.append("]");
-        return sb.toString();
+        return "[" + leftTerm +
+                "," +
+                rightTerm +
+                "]";
     }
 }

@@ -4,7 +4,6 @@ import org.aoc2021.Utils.Utils;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
-import java.util.Objects;
 
 //https://adventofcode.com/2021/day/16
 public class Day16 {

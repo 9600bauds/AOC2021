@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Day12Test {
     @Test
     void run() {
-        Object[] answers  = Day12.Run("Day12_Example", true);
+        Object[] answers  = Day12.Run("Day12_Example");
         assertEquals(answers[0].toString(), "10");
         assertEquals(answers[1].toString(), "36");
     }

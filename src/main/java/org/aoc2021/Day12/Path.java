@@ -40,7 +40,7 @@ public class Path {
         final StringBuilder sb = new StringBuilder();
         if(canVisitAgain) sb.append('*');
         for(Cave cave : trajectory){
-            sb.append(cave.name + ",");
+            sb.append(cave.name).append(",");
         }
         return sb.toString();
     }

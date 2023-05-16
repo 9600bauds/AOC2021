@@ -26,9 +26,7 @@ public class BracketPair {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("");
-        sb.append(openChar);
-        sb.append(closeChar);
-        return sb.toString();
+        return String.valueOf(openChar) +
+                closeChar;
     }
 }

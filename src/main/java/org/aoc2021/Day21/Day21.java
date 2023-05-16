@@ -88,7 +88,7 @@ public class Day21 {
                     continue; //Do not split, do not pass go, do not collect $200
                 }
 
-                thisUniverse.DoMultiverseSplit(quantumDiceResults, wins, newMultiverse, currInstances);
+                thisUniverse.DoMultiverseSplit(quantumDiceResults, newMultiverse, currInstances);
             }
 
             pendingUniverses = newMultiverse;

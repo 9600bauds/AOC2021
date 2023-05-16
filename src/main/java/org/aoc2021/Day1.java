@@ -19,7 +19,7 @@ public class Day1 {
         List<Integer> initialMeasurements = CollectionUtils.StringList2IntList(input);
 
         //Part 1 is handled by the AnalyzeMeasurements function on the initial input.
-        answers[0] = (Object) AnalyzeMeasurements(initialMeasurements, silent);
+        answers[0] = AnalyzeMeasurements(initialMeasurements, silent);
 
         //Part 2 makes use of the same function, except we need to create a new input using a sliding-window technique.
         List<Integer> slidingWindowMeasurements = new ArrayList<>();

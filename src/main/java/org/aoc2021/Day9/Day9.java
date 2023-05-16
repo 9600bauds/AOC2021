@@ -92,17 +92,17 @@ public class Day9 {
         int maxy = board[0].length - 1;
 
         for(int y = maxy; y >= 0; y--){
-            String line = "";
+            StringBuilder line = new StringBuilder();
             for(int x = 0; x <= maxx; x++){
                 Point p = new Point(x, y);
                 int num = board[x][y];
 
                 String color = GetColor(p, num, topBasins, lowPoints, MAX_HEIGHT);
                 if(color != null){
-                    line += color + num + TerminalColors.ANSI_RESET;
+                    line.append(color).append(num).append(TerminalColors.ANSI_RESET);
                 }
                 else{
-                    line += num;
+                    line.append(num);
                 }
 
             }

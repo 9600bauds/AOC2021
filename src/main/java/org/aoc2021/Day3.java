@@ -15,28 +15,27 @@ public class Day3 {
 
         int totalBits = input.get(0).length();
 
-        String epsilonRateBin = "";
-        String gammaRateBin = "";
-        int epsilonRateDec = 0;
-        int gammaRateDec = 0;
+        StringBuilder epsilonRateBin = new StringBuilder();
+        StringBuilder gammaRateBin = new StringBuilder();
+
 
         for(int bitIndex = 0; bitIndex < totalBits; bitIndex++){
             char commonBit = FindCommonBit(input, bitIndex, true);
             if(commonBit == '0'){
-                gammaRateBin += "0"; //Gamma rate uses the most common bit
-                epsilonRateBin += "1"; //Epsilon rate uses the least common bit
+                gammaRateBin.append("0"); //Gamma rate uses the most common bit
+                epsilonRateBin.append("1"); //Epsilon rate uses the least common bit
             }
             else if (commonBit == '1'){
-                gammaRateBin += "1"; //Gamma rate uses the most common bit
-                epsilonRateBin += "0"; //Epsilon rate uses the least common bit
+                gammaRateBin.append("1"); //Gamma rate uses the most common bit
+                epsilonRateBin.append("0"); //Epsilon rate uses the least common bit
             }
             else{
                 throw new RuntimeException("Bits were equal for part 1 (should never happen)!");
             }
         }
 
-        epsilonRateDec = Integer.parseInt(epsilonRateBin, 2); //Convert to decimal
-        gammaRateDec = Integer.parseInt(gammaRateBin, 2); //Convert to decimal
+        int epsilonRateDec = Integer.parseInt(epsilonRateBin.toString(), 2); //Convert to decimal
+        int gammaRateDec = Integer.parseInt(gammaRateBin.toString(), 2); //Convert to decimal
         int powerConsumption = epsilonRateDec * gammaRateDec;
         answers[0] = powerConsumption;
         if(!silent){
@@ -57,7 +56,7 @@ public class Day3 {
             if(commonBit == '='){
                 commonBit = '1';
             }
-            oxyLines = FilterLines(oxyLines, bitIndex, commonBit);
+            FilterLines(oxyLines, bitIndex, commonBit);
             if(oxyLines.size() <= 1){
                 oxyRateBin = oxyLines.get(0);
                 break;
@@ -70,7 +69,7 @@ public class Day3 {
             if(commonBit == '='){
                 commonBit = '0';
             }
-            co2Lines = FilterLines(co2Lines, bitIndex, commonBit);
+            FilterLines(co2Lines, bitIndex, commonBit);
             if(co2Lines.size() <= 1){
                 co2RateBin = co2Lines.get(0);
                 break;

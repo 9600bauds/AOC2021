@@ -11,10 +11,8 @@ public class SearchState {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append(pos);
-        sb.append(", score=").append(score);
-        return sb.toString();
+        return pos +
+                ", score=" + score;
     }
 
     public SearchState(Point pos) {
@@ -24,7 +22,7 @@ public class SearchState {
         path.add(pos);
     }
 
-    public SearchState(Point pos, SearchState parent, int[][] board, Point target) {
+    public SearchState(Point pos, SearchState parent, int[][] board) {
         this.pos = pos;
         score = parent.score + board[pos.x][pos.y];
         path = new ArrayList<>(parent.path);

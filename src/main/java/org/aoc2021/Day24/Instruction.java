@@ -1,10 +1,5 @@
 package org.aoc2021.Day24;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 /**
  * Instruction used for Day 24. Please note that indexB and valueB are mutually exclusive, an instruction will refer to either
  * a set value, or the index of a variable, not both. To check which one it refers to, you can check whether the corresponding var is null.
@@ -60,7 +55,7 @@ public class Instruction {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("");
+        final StringBuilder sb = new StringBuilder();
         sb.append(operation);
         sb.append(" ").append(int2char(indexA));
         if(indexB != null){

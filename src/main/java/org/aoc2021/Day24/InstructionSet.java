@@ -2,7 +2,6 @@ package org.aoc2021.Day24;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class InstructionSet {
     List<Instruction> instructionList;

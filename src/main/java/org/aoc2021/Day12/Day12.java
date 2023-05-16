@@ -10,7 +10,7 @@ public class Day12 {
     static final String START_CAVE = "start";
     static final String END_CAVE = "end";
 
-    public static Object[] Run(String filename, boolean silent) {
+    public static Object[] Run(String filename) {
         Object[] answers = new Object[2];
         if (filename == null) filename = MethodHandles.lookup().lookupClass().getSimpleName();
         List<String> input = Utils.SplitInputByLinebreaks(filename);

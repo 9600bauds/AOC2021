@@ -35,7 +35,7 @@ public class Diracverse {
         isPlayer1Turn = parent.isPlayer1Turn;
     }
 
-    public void DoMultiverseSplit(Map<Integer, Long> quantumDiceResults, long[] wins, Map<Diracverse, Long> newMultiverse, Long currInstances) {
+    public void DoMultiverseSplit(Map<Integer, Long> quantumDiceResults, Map<Diracverse, Long> newMultiverse, Long currInstances) {
         for(Map.Entry<Integer, Long> diceResult : quantumDiceResults.entrySet()){
             int val = diceResult.getKey(); //What's the combination of results that the dice landed on during the 3 throws?
             long weight = diceResult.getValue(); //How often does that result occur per 3 throws?
@@ -74,10 +74,8 @@ public class Diracverse {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("P1:").append(player1score).append("/");
-        sb.append("P2:").append(player2score);
-        return sb.toString();
+        return "P1:" + player1score + "/" +
+                "P2:" + player2score;
     }
 
     //Very important for the map

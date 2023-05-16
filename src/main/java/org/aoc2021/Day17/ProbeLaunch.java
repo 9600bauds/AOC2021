@@ -51,9 +51,7 @@ public class ProbeLaunch {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("");
-        sb.append(initX);
-        sb.append(", ").append(initY);
-        return sb.toString();
+        return initX +
+                ", " + initY;
     }
 }

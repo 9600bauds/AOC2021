@@ -110,7 +110,7 @@ public class Day20 {
             }
             out.append("\n");
         }
-        System.out.println(out.toString());
+        System.out.println(out);
     }
 
     private static Set<Point> ProcessInput(List<String> input) {

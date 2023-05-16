@@ -117,13 +117,13 @@ public class Day11 {
 
     public static void DrawMap(int[][] board){
         for(int y = board.length-1; y >= 0; y--){
-            String line = "";
+            StringBuilder line = new StringBuilder();
             for(int x = 0; x < board[0].length-1; x++){
                 int num = board[x][y];
                 if(num == MIN_ENERGY_LEVEL){
-                    line += TerminalColors.ANSI_BG_CYAN + num + TerminalColors.ANSI_RESET;
+                    line.append(TerminalColors.ANSI_BG_CYAN).append(num).append(TerminalColors.ANSI_RESET);
                 }
-                else line += num;
+                else line.append(num);
             }
             System.out.println(line);
         }

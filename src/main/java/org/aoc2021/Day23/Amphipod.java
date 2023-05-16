@@ -29,10 +29,8 @@ public class Amphipod implements Cloneable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("");
-        sb.append(sprite);
-        sb.append(", ").append(isDone);
-        return sb.toString();
+        return sprite +
+                ", " + isDone;
     }
 
     @Override

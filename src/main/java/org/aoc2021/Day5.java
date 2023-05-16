@@ -94,18 +94,18 @@ public class Day5 {
 
     //Only from 0 to 10, for testing purposes
     public static void drawBoard(Map<String, Integer> vents){
-        String out = "";
+        StringBuilder out = new StringBuilder();
         for(int y = 0; y < 10; y++){
             for(int x = 0; x < 10; x++){
                 String thisCoord = x + "," + y;
                 if(vents.containsKey(thisCoord)){
-                    out += vents.get(thisCoord);
+                    out.append(vents.get(thisCoord));
                 }
                 else{
-                    out += ".";
+                    out.append(".");
                 }
             }
-            out += "\r\n";
+            out.append("\r\n");
         }
         System.out.println(out);
     }

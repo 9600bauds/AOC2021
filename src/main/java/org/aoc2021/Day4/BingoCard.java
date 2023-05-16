@@ -95,7 +95,7 @@ public class BingoCard {
     @Override
     //Multiline representation of the card. Marks the called numbers as green
     public String toString() {
-        final StringBuilder sb = new StringBuilder("");
+        final StringBuilder sb = new StringBuilder();
         for(int rowIndex = 0; rowIndex < rows; rowIndex++) {
             for (int colIndex = 0; colIndex < cols; colIndex++) {
                 String color = TerminalColors.ANSI_RESET;
@@ -106,7 +106,7 @@ public class BingoCard {
                 if(num.length() < 2){
                     num = " " + num;
                 }
-                sb.append(color + num + " ");
+                sb.append(color).append(num).append(" ");
             }
             sb.append("\r\n");
         }

@@ -49,7 +49,7 @@ public class Day4 {
                         answers[0] = finalScore;
                         if(!silent){
                             System.out.println("Bingo with number " + number + "!");
-                            System.out.println(card.toString());
+                            System.out.println(card);
                             System.out.println("Sum of unmarked numbers: " + sum);
                             System.out.println("Final score: " + finalScore);
                         }
@@ -62,7 +62,7 @@ public class Day4 {
                         answers[1] = finalScore;
                         if(!silent){
                             System.out.println("Found the last winning card with number " + number + "!");
-                            System.out.println(card.toString());
+                            System.out.println(card);
                             System.out.println("Sum of unmarked numbers: " + sum);
                             System.out.println("Final score: " + finalScore);
                         }

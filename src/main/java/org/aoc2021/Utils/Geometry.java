@@ -77,7 +77,7 @@ public class Geometry {
         }
         int height = maxy - miny;
         int width = maxx - minx;
-        return new Rectangle(minx, miny, width, height); //TODO RECTANGLE() LIES IT ACTUALLY NEEDS THE LOWER LEFT
+        return new Rectangle(minx, miny, width, height);
     }
 
     public static int ManhattanDistance(Point p1, Point p2){

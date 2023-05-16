@@ -21,15 +21,13 @@ public class Instruction {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Instruction{");
-        sb.append("minx=").append(minx);
-        sb.append(", maxx=").append(maxx);
-        sb.append(", miny=").append(miny);
-        sb.append(", maxy=").append(maxy);
-        sb.append(", minz=").append(minz);
-        sb.append(", maxz=").append(maxz);
-        sb.append(", isOn=").append(isOn);
-        sb.append('}');
-        return sb.toString();
+        return "Instruction{" + "minx=" + minx +
+                ", maxx=" + maxx +
+                ", miny=" + miny +
+                ", maxy=" + maxy +
+                ", minz=" + minz +
+                ", maxz=" + maxz +
+                ", isOn=" + isOn +
+                '}';
     }
 }

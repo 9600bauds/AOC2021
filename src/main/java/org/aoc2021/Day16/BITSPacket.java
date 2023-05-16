@@ -158,7 +158,7 @@ public class BITSPacket {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("");
+        final StringBuilder sb = new StringBuilder();
         switch (typeID) {
             case TYPEID_SUM:
                 sb.append("SUM(").append(subpackets.stream().map(Object::toString).collect(Collectors.joining(","))).append(")");

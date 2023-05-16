@@ -102,7 +102,7 @@ public class Day15 {
             }
             List<Point> neighbors = Geometry.GetOrthogonalNeighbors(currState.pos, board);
             for(Point neighbor : neighbors){
-                SearchState newState = new SearchState(neighbor, currState, board, finishPoint);
+                SearchState newState = new SearchState(neighbor, currState, board);
                 int toBeat = bestScore[neighbor.x][neighbor.y];
                 if(newState.score < toBeat){
                     bestScore[neighbor.x][neighbor.y] = newState.score;

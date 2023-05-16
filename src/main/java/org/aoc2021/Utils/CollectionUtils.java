@@ -83,8 +83,6 @@ public class CollectionUtils {
         return false;
     }
 
-
-
     public static <T> T getFromQueue(Queue<T> queue, int index){
         if(index>=queue.size()){
             throw new IndexOutOfBoundsException(queue.size() + " - " + index);

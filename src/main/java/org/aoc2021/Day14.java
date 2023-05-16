@@ -62,8 +62,8 @@ public class Day14 {
      * Used to calculate the score asked for the assignment.
      */
     public static Long LetterScore(Map<Character, Long> usages, boolean silent){
-        Long max = Long.MIN_VALUE;
-        Long min = Long.MAX_VALUE;
+        long max = Long.MIN_VALUE;
+        long min = Long.MAX_VALUE;
         for(Long i : usages.values()){
             max = Math.max(i, max);
             min = Math.min(i, min);

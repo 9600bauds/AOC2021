@@ -53,10 +53,7 @@ public class Cuboid {
         if(other.origin.getY() < origin.getY() || other.MaxY() > MaxY()) {
             return false;
         }
-        if(other.origin.getZ() < origin.getZ() || other.MaxZ() > MaxZ()) {
-            return false;
-        }
-        return true;
+        return !(other.origin.getZ() < origin.getZ()) && !(other.MaxZ() > MaxZ());
     }
     public boolean Intersects(Cuboid other){
         if(other.MaxX() < origin.getX() || MaxX() < other.origin.getX()){
@@ -65,10 +62,7 @@ public class Cuboid {
         if(other.MaxY() < origin.getY() || MaxY() < other.origin.getY()){
             return false;
         }
-        if(other.MaxZ() < origin.getZ() || MaxZ() < other.origin.getZ()){
-            return false;
-        }
-        return true;
+        return !(other.MaxZ() < origin.getZ()) && !(MaxZ() < other.origin.getZ());
     }
     public Cuboid Intersection(Cuboid other){
         double minX = Math.max(origin.getX(), other.origin.getX());
@@ -100,10 +94,8 @@ public class Cuboid {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Q:");
-        sb.append("{").append(origin).append("} / ");
-        sb.append(deltaX).append("x").append(deltaY).append("x").append(deltaZ);
-        return sb.toString();
+        return "Q:" + "{" + origin + "} / " +
+                deltaX + "x" + deltaY + "x" + deltaZ;
     }
 
     public static boolean CuboidInCollectionContains(Cuboid q, Collection<Cuboid> collection){

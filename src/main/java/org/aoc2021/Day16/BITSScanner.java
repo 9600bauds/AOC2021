@@ -1,7 +1,5 @@
 package org.aoc2021.Day16;
 
-import org.aoc2021.Utils.Utils;
-
 //This class mostly exists because you can't byref primitives in Java, so I need to make a whole dang class
 //just so other scopes can modify int i.
 public class BITSScanner {
@@ -24,9 +22,7 @@ public class BITSScanner {
             return true;
         }
         String remaining = fullBinary.substring(i);
-        if(remaining.matches("0*")){ //Only thing left is trailing zeroes
-            return true;
-        }
-        return false;
+        //Only thing left is trailing zeroes
+        return remaining.matches("0*");
     }
 }

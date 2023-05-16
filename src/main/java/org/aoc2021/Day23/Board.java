@@ -69,7 +69,7 @@ public class Board {
     }
 
     public String toString(Gamestate gamestate) {
-        final StringBuilder sb = new StringBuilder("");
+        final StringBuilder sb = new StringBuilder();
         for(int y = maxy; y >= miny ; y--){
             for(int x = minx; x <= maxx; x++){
                 Point p = new Point(x, y);
